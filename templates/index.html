@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>FGO 宝具演出時間ランキング</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="css/filter.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <div class="title">
+                <h1><span>FGO</span> <span>宝具演出時間</span><span>ランキング</span></h1>
+                <p class="about"><a href="about.html">About</a></p>
+            </div>
+        </header>
+        <div class="filter">
+            <input type="checkbox" class="filter-title-check" id="filter-title-check" checked>
+            <label for="filter-title-check" class="filter-title-label">フィルター</label>
+            <div class="filter-contents">
+            {% for filter_group in filter_groups %}
+                <div class="filter-group">
+                {% for filter_type, filter_keys in filter_group.items() %}
+                    <div class="check-button-group filter-{{ filter_type }}">
+                    {% for filter_key in filter_keys %}
+                        <div class="item">
+                            <input type="checkbox" class="check-button filter-{{ filter_type }}" id="{{ filter_key }}" data-filter-type="{{ filter_type }}" value="{{ filter_key }}"><label for="{{ filter_key }}">{{ filter_key }}</label>
+                        </div>
+                    {% endfor %}
+                    </div>
+                {% endfor %}
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+        <div class="main"> 
+            <table>
+                <thead>
+                    <tr>
+                    {% for key, header in headers.items() %}
+                        <th class="header-{{ key }}">{{ header }}</th>
+                    {% endfor %}
+                    </tr>
+                </thead>
+                <tbody id="filter"{% for filter_type in filters %} data-filter-{{ filter_type }}=""{% endfor %}>
+                {% for servant in servants %}
+                    {% set sep = joiner(' ') %}
+                    <tr data-filter-key="{% for filter_type in filters %}{{ sep() }}{{ servant[filter_type] }}{% endfor %}">
+                    {% for key in headers %}
+                        <td class="servant-{{ key }}">{{ servant[key] }}</td>
+                    {% endfor %}
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

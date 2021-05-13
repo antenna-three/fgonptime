@@ -1,0 +1,21 @@
+[data-filter-class]:not([data-filter-class~="剣"]) [data-filter-key~="剣"],
+[data-filter-class]:not([data-filter-class~="弓"]) [data-filter-key~="弓"],
+[data-filter-class]:not([data-filter-class~="槍"]) [data-filter-key~="槍"],
+[data-filter-class]:not([data-filter-class~="騎"]) [data-filter-key~="騎"],
+[data-filter-class]:not([data-filter-class~="術"]) [data-filter-key~="術"],
+[data-filter-class]:not([data-filter-class~="殺"]) [data-filter-key~="殺"],
+[data-filter-class]:not([data-filter-class~="狂"]) [data-filter-key~="狂"],
+[data-filter-class]:not([data-filter-class~="裁"]) [data-filter-key~="裁"],
+[data-filter-class]:not([data-filter-class~="讐"]) [data-filter-key~="讐"],
+[data-filter-class]:not([data-filter-class~="分"]) [data-filter-key~="分"],
+[data-filter-class]:not([data-filter-class~="月"]) [data-filter-key~="月"],
+[data-filter-class]:not([data-filter-class~="降"]) [data-filter-key~="降"],
+[data-filter-class]:not([data-filter-class~="盾"]) [data-filter-key~="盾"],
+[data-filter-color]:not([data-filter-color~="A"]) [data-filter-key~="A"],
+[data-filter-color]:not([data-filter-color~="B"]) [data-filter-key~="B"],
+[data-filter-color]:not([data-filter-color~="Q"]) [data-filter-key~="Q"],
+[data-filter-range]:not([data-filter-range~="全体"]) [data-filter-key~="全体"],
+[data-filter-range]:not([data-filter-range~="単体"]) [data-filter-key~="単体"],
+[data-filter-range]:not([data-filter-range~="補助"]) [data-filter-key~="補助"] {
+    visibility: collapse;
+}
