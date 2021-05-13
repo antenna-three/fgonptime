@@ -3,6 +3,7 @@ fetch servant list and noble phantasm time from fgo atwiki
 '''
 
 import pandas
+import json
 
 def fetch_ordered_servants():
     '''
@@ -49,6 +50,9 @@ def main():
     '''
     merge servant list and hidden status
     '''
+    with open('cols_to_use.json', 'r', encoding='utf-8') as f:
+        cols_to_use = json.load(f)
+
     servants = fetch_ordered_servants()
     hidden_status = fetch_hidden_status()
     merged = servants.merge(
@@ -57,7 +61,7 @@ def main():
                 right_index=True,
                 suffixes=(None, '_hidden')
                 )
-    return merged[['name', 'class', 'range', 'color', 'time', 'cond']]
+    return merged[cols_to_use]
 
 def dump_json():
     servants = main()
