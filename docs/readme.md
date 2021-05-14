@@ -11,7 +11,7 @@ Python 3.9およびpipenvが必要です。
 ## インストール
 
 ```shell
-$ git clone https://github.com/antenna-three/fgonptime
+$ git clone https://github.com/antenna-three/fgonptime.git
 $ cd fgonptime
 $ pipenv install
 ```
