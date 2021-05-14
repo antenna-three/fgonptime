@@ -5,7 +5,7 @@ render fetched servants data to html using template
 from jinja2 import Environment, FileSystemLoader
 import json
 
-from layout_to_filters import layout_to_filters
+from .layout_to_filters import layout_to_filters
 
 def main(servants):
     '''

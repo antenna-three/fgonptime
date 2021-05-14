@@ -1,6 +1,6 @@
-import fetch_servants
-import format_servants
-import to_html
+from . import fetch_servants
+from . import format_servants
+from . import to_html
 
 if __name__ == '__main__':
     servants = fetch_servants.main()

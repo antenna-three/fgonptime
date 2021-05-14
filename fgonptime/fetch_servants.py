@@ -50,8 +50,8 @@ def main():
     '''
     merge servant list and hidden status
     '''
-    with open('cols_to_use.json', 'r', encoding='utf-8') as f:
-        cols_to_use = json.load(f)
+    with open('columns.json', 'r', encoding='utf-8') as f:
+        columns = json.load(f)
 
     servants = fetch_ordered_servants()
     hidden_status = fetch_hidden_status()
@@ -61,7 +61,7 @@ def main():
                 right_index=True,
                 suffixes=(None, '_hidden')
                 )
-    return merged[cols_to_use]
+    return merged[columns]
 
 def dump_json():
     servants = main()
