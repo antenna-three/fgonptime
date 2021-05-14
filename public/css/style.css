@@ -106,15 +106,14 @@ header {
     margin: 0 -0.5px;
     padding: 8px 12px;
     text-align: center;
-    color: #888;
+    color: #46e;
     background: transparent;
-    border: 1px solid #ccc;
+    border: 1px solid #46e;
     box-sizing: border-box;
 }
 .check-button-group .check-button:checked + label {
     color: #fff;
     background: #46e;
-    border: 1px solid #ccc;
 }
 .check-button-group label:hover {
     background: #eee;
