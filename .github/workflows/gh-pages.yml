@@ -3,6 +3,7 @@ name: github pages
 on:
     schedule:
         - cron: '33 4 * * *'
+    push:
     workflow_dispatch:
 
 jobs:
