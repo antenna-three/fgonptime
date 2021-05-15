@@ -64,3 +64,7 @@ $ pipenv run python -m fgonptime
 ## 作成者
 
 [@antenna_games](https://twitter.com/antenna_games)
+
+## ライセンス
+
+MIT License. See `LICENSE` for more information.
