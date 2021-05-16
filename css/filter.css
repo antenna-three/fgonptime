@@ -17,5 +17,5 @@
 [data-filter-range]:not([data-filter-range~="全体"]) [data-filter-key~="全体"],
 [data-filter-range]:not([data-filter-range~="単体"]) [data-filter-key~="単体"],
 [data-filter-range]:not([data-filter-range~="補助"]) [data-filter-key~="補助"] {
-    visibility: collapse;
+    display: none;
 }
