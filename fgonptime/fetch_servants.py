@@ -40,7 +40,7 @@ def fetch_hidden_status():
     servants.rename(columns={'クラス': 'class', '宝具長さ_倍速': 'strtime'}, inplace=True)
     servants.columns.name = 'number'
     servants = servants[~servants.index.duplicated(keep='first')]
-    np_times = servants['strtime'].str.extractall(r'(?P<time>\d{1,2}\.\d)(?:[@＠](?P<cond>.{1,2}))?')
+    np_times = servants['strtime'].str.extractall(r'(?P<time>\d{1,2}\.\d)(?:[@＠](?P<cond>.\D?))?')
     min_times = np_times.astype({'time': 'float'}).sort_values('time').groupby(level=0).head(1).sort_index(0)
     min_times.reset_index(level=1, inplace=True)
     servants = pandas.concat([servants, min_times], axis=1)
