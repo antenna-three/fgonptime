@@ -33,7 +33,6 @@ def fetch_hidden_status():
         servants = dfs[1]
     else:
         raise IOError('Hidden status table not found')
-    print(servants)
     servants.drop(index='No', inplace=True)
     servants.rename(columns=str.lower, inplace=True)
     servants.columns = ('_'.join(dict.fromkeys(c)) for c in servants.columns)
