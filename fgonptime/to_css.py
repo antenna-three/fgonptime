@@ -5,7 +5,7 @@ layout.json -> filter.css
 import json
 import collections
 
-from layout_to_filters import layout_to_filters
+from .layout_to_filters import layout_to_filters
 
 def make_selector(filter_type, filter_key):
     return f'[data-filter-{filter_type}]:not([data-filter-{filter_type}~="{filter_key}"]) [data-filter-key~="{filter_key}"]'
@@ -23,7 +23,7 @@ def make_filter():
 
 def export_css():
     css = make_filter()
-    with open('public/filter.css', 'w', encoding='utf-8') as f:
+    with open('public/css/filter.css', 'w', encoding='utf-8') as f:
         f.write(css)
 
 def debug():
