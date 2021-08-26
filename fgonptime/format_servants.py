@@ -13,7 +13,13 @@ def add_class_to_duplicated_names(servants):
 
 def main(servants):
     servants = add_class_to_duplicated_names(servants)
-    servants = servants.append({'name': '妖精騎士ランスロット（再臨3）', 'class': '槍', 'range': '全体', 'color': 'B', 'time': 10.8}, ignore_index=True)
+    servants = servants.append({
+        'name': '妖精騎士ランスロット（再臨3）',
+        'class': '槍',
+        'range': '全体',
+        'color': 'B',
+        'time': 10.8
+    }, ignore_index=True)
     servants = servants.sort_values('time')
     return servants.to_dict(orient='records')
 
