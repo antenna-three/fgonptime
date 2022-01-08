@@ -24,6 +24,14 @@ $ pipenv install
 $ pipenv run python -m fgonptime
 ```
 
+新クラス実装時の対応
+
+layout.jsonを編集
+
+to_css.pyのexport_cssを実行
+
+
+
 ## 構成
 
 - .github/workflows/gh-pages.yml
@@ -67,4 +75,4 @@ $ pipenv run python -m fgonptime
 
 ## ライセンス
 
-MIT License. See `LICENSE` for more information.
+MIT License. See `LICENSE` for more information.
