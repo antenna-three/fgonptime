@@ -1,156 +1,161 @@
 html {
-    font-family: sans-serif;
-    color: #333;
+  font-family: sans-serif;
+  color: #333;
 }
 .main {
-    width: fit-content;
-    margin: 0 auto;
+  width: fit-content;
+  margin: 0 auto;
 }
 header {
-    height: fit-content;
+  height: fit-content;
 }
 .title {
-    display: flex;
-    justify-content: flex-start;
-    margin: 30px auto 0;
-    padding: 0 15px 0;
-    max-width: 900px;
-    height: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  margin: 30px auto 0;
+  padding: 0 15px 0;
+  max-width: 900px;
+  height: fit-content;
 }
 .title h1 {
-    margin: 0;
-    font-size: 32px;
+  margin: 0;
+  font-size: 32px;
 }
 .title h1 span {
-    display: inline-block;
+  display: inline-block;
 }
 .title .about {
-    margin: 0;
-    margin-top: auto;
-    margin-left: auto;
+  margin: 0;
+  margin-top: auto;
+  margin-left: auto;
 }
 .filter {
-    position: sticky;
-    top: 0;
-    width: 100vw;
-    height: fit-content;
-    margin: 0 auto;
-    background: #fff;
-    border-bottom: solid 1px #ccc;
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  height: fit-content;
+  margin: 0 auto;
+  background: #fff;
+  border-bottom: solid 1px #ccc;
 }
 
 .filter-title-check {
-    display: none;
+  display: none;
 }
 .filter-title-label {
-    display: block;
-    margin: 0 auto;
-    padding: 15px 15px 5px;
-    max-width: 900px;
+  display: block;
+  margin: 0 auto;
+  padding: 15px 15px 5px;
+  max-width: 900px;
 }
 .filter-title-check + .filter-title-label + .filter-contents {
-    height: fit-content;
-    max-height: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: .3s;
+  height: fit-content;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
 }
 .filter-title-check:checked + .filter-title-label + .filter-contents {
-    max-height: 150px;
-    opacity: 1;
-    visibility: visible;
+  max-height: 150px;
+  opacity: 1;
+  visibility: visible;
 }
 .filter-title-label:before {
-    content: "";
-    display: inline-block;
-    margin-right: 12px;
-    width: 12px;
-    height: 12px;
-    border-bottom: 3px solid #46d;
-    border-right: 3px solid #46d;
-    transform-origin: 70% 70%;
-    transform: rotate3d(0, 0, 1, 45deg);
-    transition: .3s;
+  content: '';
+  display: inline-block;
+  margin-right: 12px;
+  width: 12px;
+  height: 12px;
+  border-bottom: 3px solid #46d;
+  border-right: 3px solid #46d;
+  transform-origin: 70% 70%;
+  transform: rotate3d(0, 0, 1, 45deg);
+  transition: 0.3s;
 }
 .filter-title-check:checked + .filter-title-label:before {
-    transform: rotate3d(1, -0.41421356, 0, 180deg);
+  transform: rotate3d(1, -0.41421356, 0, 180deg);
 }
 
 .filter-contents {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 900px;
-    margin: auto;
-    padding: 5px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: auto;
+  padding: 5px 10px;
 }
 .filter-group {
-    display: flex;
-    flex-grow: 1;
+  display: flex;
+  flex-grow: 1;
 }
 .check-button-group {
-    display: flex;
-    flex-grow: 1;
-    flex-wrap: wrap;
-    margin: 4px;
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  margin: 4px;
 }
 .check-button-group .item {
-    display: flex;
-    flex-grow: 1;
+  display: flex;
+  flex-grow: 1;
 }
 .check-button-group .check-button {
-    display: none;
+  display: none;
 }
 .check-button-group .check-button + label {
-    flex-grow: 1;
-    display: block;
-    margin: 0 -0.5px;
-    padding: 8px 12px;
-    text-align: center;
-    color: #46e;
-    background: transparent;
-    border: 1px solid #46e;
-    box-sizing: border-box;
+  flex-grow: 1;
+  display: block;
+  margin: 0 -0.5px;
+  padding: 8px 12px;
+  text-align: center;
+  color: #46e;
+  background: transparent;
+  border: 1px solid #46e;
+  box-sizing: border-box;
 }
 .check-button-group .check-button:checked + label {
-    color: #fff;
-    background: #46e;
+  color: #fff;
+  background: #46e;
 }
 .check-button-group label:hover {
-    background: #eee;
+  background: #eee;
 }
 .check-button-group .item:first-of-type .check-button + label {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 .check-button-group .item:last-of-type .check-button + label {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
-table {
-    border-collapse: collapse;
-    text-align: center;
+.table {
+  text-align: center;
 }
-th, td {
-    padding: 10px 5px;
+.tr {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
-th {
-    border-bottom: solid 1px #ccc;
+.th,
+.td {
+  padding: 10px 5px;
 }
-td {
-    border-bottom: solid 1px #ccc;
+.thead > .tr {
+  border-bottom: solid 1px #ccc;
 }
-.header-name, .servant-name {
-    text-align: left;
-    padding-left: 5vw;
+.tbody > .tr {
+  border-bottom: solid 1px #ccc;
+}
+.header-name,
+.servant-name {
+  text-align: left;
+  padding-left: 5vw;
 }
 .header-time {
-    padding-left: 0;
-    padding-right: 5vw;
-    text-align: right;
+  padding-left: 0;
+  padding-right: 5vw;
+  text-align: right;
 }
 .servant-time {
-    padding-left: 0;
-    padding-right: 5vw;
-    text-align: right;
+  padding-left: 0;
+  padding-right: 5vw;
+  text-align: right;
 }
-
